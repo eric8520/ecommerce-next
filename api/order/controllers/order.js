@@ -26,7 +26,7 @@ module.exports = {
             const data = {
                 game: product.id,
                 user: userId,
-                totalPayment,
+                totalPayment: totalPayment.toFixed(2),
                 idPayment: charge.id, 
                 addressShipping
             }
