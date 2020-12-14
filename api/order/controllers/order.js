@@ -10,7 +10,7 @@ module.exports = {
         const { token, products, userId, addressShipping } = ctx.request.body
         let totalPayment = 0;
         products.map(product => {
-            totalPayment = totalPayment + product.price;
+            totalPayment = parseFloat(totalPayment) + parseFloat(product.price);
         })
         
         const charge = await stripe.charges.create({
